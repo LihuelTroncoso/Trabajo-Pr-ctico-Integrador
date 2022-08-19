@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Paciente</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="img/iconoPagina.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estiloTicketObraSocialPaciente.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <img class="imagen" src="img/iconoPagina.png" alt="" width="70px">
+            <h1>OBRA SOCIAL</h1>
+        </div>
+        <form action="factura" method="POST">
+        <div class="formulario">
+        
+            <br>Obra social <select name="obraSocial" class="controls" >
+                <option></option>
+                <option value="OSDE">OSDE</option>
+                <OPTION value="Medife">Medifé</OPTION>
+                <option value="Swiss medical">Swiss medical</option>
+            </select>
+        </div>
+        <div class="formulario">
+            <br>DNI del paciente<input type="text" name="dni" class="controls">
+            <!-- <p id="demo">Precio del Estudio: </p> -->
+            <button class="boton" type="submit" value="Buscar" onclick="location.href='muestraPacientes.html'">Facturar</button>
+        </div>
+        </form>
+        <div id="divVolver" class="formulario">
+            <button class="boton" type="submit" value="Volver" onclick="location.href='indexClinica.html'">Volver</button>
+        </div>
+        <footer>
+            <h6>Vita Sanatory © Copyright 2021 </h6>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Paciente</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="img/iconoPagina.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estiloRegistro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <img class="imagen" src="img/iconoPagina.png" width="70px">
+            <h1>REGISTRAR PACIENTES</h1>
+        </div>            
+        </div>
+        <div class="formulario">
+        <form action="formulario" method="POST">
+            <br>Nombre <input type="text" name="nombre" class="controls" required>
+            <br>Apellido <input type="text" name="apellido" class="controls" required> 
+            <br>DNI <input type="text" name="dni" class="controls" required>
+            <br>Direccion <input type="text" name="direccion" class="controls" required>
+            <br>Obra social <select name="obraSocial" class="controls" required>
+                <option></option>
+                <option value="OSDE">OSDE</option>
+                <OPTION value="Medifé">Medifé</OPTION>
+                <option value="Swiss medical">Swiss medical</option>
+            </select>
+            <br>Doctor <select name="doctor" class="controls" required>
+                <option></option>
+                <option value="Horacio Rodriguez">Horacio Rodriguez</option>
+                <option value="Carlos Alberto Miculicich">Carlos Alberto Miculicich</option>
+                <option value="Maria Gomez">Maria Gomez</option>
+            </select>
+
+            <br>Estudio
+            <br>
+            <select id="mySelect" onchange="myFunction()" class="controls" name="estudio" required>
+                <option value="nada">
+                <option value="icc">Imagen con contraste
+                <option value="isc">Imagen sin contraste
+                <option value="lab">Laboratorio
+            </select>
+            <p id="demo">Precio del Estudio: </p>      
+            <script>
+                var select = document.querySelector('select');
+                
+                function myFunction() {
+                    var x = document.getElementById("mySelect").value;
+                    const precioICC = 2000;
+                    const precioISC = 4000;
+                    const precioLAB = 8000;
+            
+                    if(x == 'icc') {
+                        document.getElementById("demo").innerHTML = "Precio del Estudio: $ " + precioICC;
+                    }
+                    if(x == 'isc') {
+                        document.getElementById("demo").innerHTML = "Precio del estudio: $ " + precioISC;
+                    }
+                    if(x == 'lab') {
+                        document.getElementById("demo").innerHTML = "Precio del estudio: $ " + precioLAB;
+                    }
+                    if(x == 'nada') {
+                        document.getElementById("demo").innerHTML = "Precio del Estudio: " ;
+                    }
+                }
+            </script>
+            <br>
+            <h3>FECHA DEL ESTUDIO</h3>
+            <br>Año <input type="number" name="año" class="controls" min="1920" max="2050" required>
+            <br>Mes <input type="number" name="mes" class="controls" min="1" max="12" required>
+            <br>Dia <input type="number" name="dia" class="controls" min="1" max="31" required>
+            <br>
+            <br>
+            <button class="boton" type="submit" value="Enviar" onclick="location.href='registroExitoso.html'">Enviar</button>
+        </form>
+        </div>
+        <div id="divVolver" class="formulario">
+            <button class="boton" type="submit" value="Volver" onclick="location.href='indexPacientes.html'">Volver</button>
+        </div>
+        <footer>
+            <h6>Vita Sanatory © Copyright 2021 </h6>
+        </footer>
+    </body>
+</html>

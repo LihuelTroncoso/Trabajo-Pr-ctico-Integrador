@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/iconoPagina.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/estiloIndexPaciente.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="titulo">
+        <img class="imagen" src="img/iconoPagina.png" alt="" width="100px">
+        <h1>Vita Sanatory</h1>
+    </div>
+    <section class="form-register">
+        <div>
+            <h4 id="tituloRegistrar">Registrar Pacientes</h4>
+            <button class="botons" type="submit" value="Registrar" onclick="location.href='registro.html'">Registrar</button><hr>
+        </div>
+        <div>
+            <h4 id="tituloBuscar">Buscar Pacientes</h4>
+            <label for="dniPaciente">DNI del paciente</label><br>
+            <form action="seleccionarPaciente"> <!-- "seleccionarPaciente" -->
+                <input class="controls" type="text" name="dni" id="dni">
+                <button class="botons" type="submit" value="Buscar" >Buscar</button>
+            </form> 
+        </div>
+        
+    </section>
+    <div id="divVolver" class="formulario">
+        <button class="boton" type="submit" value="Volver" onclick="location.href='index.html'">Volver</button>
+    </div>
+    
+    <footer>
+        <h6>Vita Sanatory © Copyright 2021 </h6>
+    </footer>
+</body>
+</html>
